@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+		<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+		<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+		<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+		<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>Burger Time</title>
+			<meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
+			<meta name="author" content="EstebanGuzzo" />
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+
+			<!-- LOAD JQUERY LIBRARY -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+			
+			<!-- LOADING FONTS AND ICONS -->
+			<link href="https://fonts.googleapis.com/css?family=Roboto:400&display=swap" rel="stylesheet" property="stylesheet" media="all" type="text/css" >
+
+			
+			<link rel="stylesheet" type="text/css" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+			<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+			
+			<!-- REVOLUTION STYLE SHEETS -->
+			<link rel="stylesheet" type="text/css" href="css/rs6.css">
+			<!-- REVOLUTION LAYERS STYLES -->
+						<!-- REVOLUTION JS FILES -->
+			
+		<script>
+			window.RS_MODULES = window.RS_MODULES || {};
+			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+			window.RS_MODULES.defered = true;
+			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+			window.RS_MODULES.type = 'compiled';
+		</script>
+					<script src="js/rbtools.min.js"></script>
+							<script src="js/rs6.min.js"></script>
+							
+			<script>function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+				try {
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) || (e.l=="fullwidth" || e.layout=="fullwidth") ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+					if(e.layout==="fullscreen" || e.l==="fullscreen")
+						newh = Math.max(e.mh,window.RSIH);
+					else{
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,
+							sl;
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}
+					var el = document.getElementById(e.c);
+					if (el!==null && el) el.style.height = newh+"px";
+					el = document.getElementById(e.c+"_wrapper");
+					if (el!==null && el) {
+						el.style.height = newh+"px";
+						el.style.display = "block";
+					}
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}
+			//});
+		  };</script>
+
+			
+		</head>
+		
+		<body style="margin: 0px;">
+		
+
+			<!-- START Burger Time REVOLUTION SLIDER 6.6.20 --><p class="rs-p-wp-fix"></p>
+			<rs-module-wrap id="rev_slider_25_1_wrapper" data-alias="burgertime" data-source="gallery" style="visibility:hidden;background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
+				<rs-module id="rev_slider_25_1" style="" data-version="6.6.20">
+					<rs-slides style="overflow: hidden; position: absolute;">
+						<rs-slide style="position: absolute;" data-key="rs-85" data-title="inicio" data-ssop="true" data-in="o:0;" data-out="a:false;">
+							<img src="assets/transparent.png" alt="inicio" class="rev-slidebg tp-rs-img" data-bg="c:#f4f1e9;" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-25-slide-85-layer-0" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:126px;"
+								data-text="w:normal;"
+								data-dim="w:637px;h:415px;"
+								data-frame_0="x:-100%;skX:45;"
+								data-frame_1="sp:1000;"
+								data-frame_999="o:0;st:w;sR:8000;"
+								style="z-index:6;"
+							><img src="assets/burgertimelogo.png" alt="" class="tp-rs-img" width="784" height="511" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-85-layer-1" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:c;yo:-180px;"
+								data-text="w:normal;"
+								data-dim="w:722px;h:137px;"
+								data-actions='o:click;a:jumptoslide;slide:rs-86;'
+								data-frame_0="y:top;"
+								data-frame_1="st:790;sp:1000;sR:790;"
+								data-frame_999="o:0;st:w;sR:7210;"
+								style="z-index:7;"
+							><img src="assets/hamburguesas.png" alt="" class="tp-rs-img" width="722" height="137" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-85-layer-2" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:c;yo:-6px;"
+								data-text="w:normal;"
+								data-dim="w:722px;h:135px;"
+								data-actions='o:click;a:jumptoslide;slide:rs-89;'
+								data-frame_0="y:top;"
+								data-frame_1="st:1230;sp:1000;sR:1230;"
+								data-frame_999="o:0;st:w;sR:6770;"
+								style="z-index:8;"
+							><img src="assets/lomos.png" alt="" class="tp-rs-img" width="722" height="135" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-85-layer-3" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:c;yo:158px;"
+								data-text="w:normal;"
+								data-dim="w:721px;h:126px;"
+								data-actions='o:click;a:jumptoslide;slide:rs-90;'
+								data-frame_0="y:top;"
+								data-frame_1="st:1560;sp:1000;sR:1560;"
+								data-frame_999="o:0;st:w;sR:6440;"
+								style="z-index:9;"
+							><img src="assets/papas.png" alt="" class="tp-rs-img" width="721" height="126" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-85-layer-4" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:c;yo:320px;"
+								data-text="w:normal;"
+								data-dim="w:721px;h:132px;"
+								data-actions='o:click;a:jumptoslide;slide:rs-91;'
+								data-frame_0="y:top;"
+								data-frame_1="st:1870;sp:1000;sR:1870;"
+								data-frame_999="o:0;st:w;sR:6130;"
+								style="z-index:10;"
+							><img src="assets/extras.png" alt="" class="tp-rs-img" width="721" height="132" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-85-layer-9" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:24px;y:1668px;"
+								data-text="w:normal;"
+								data-dim="w:464px;h:227px;"
+								data-frame_0="y:50;"
+								data-frame_1="st:2300;sp:1000;sR:2300;"
+								data-frame_999="o:0;st:w;sR:5700;"
+								style="z-index:11;"
+							><img src="assets/info1.png" alt="" class="tp-rs-img" width="366" height="179" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-85-layer-10" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:542px;y:1678px;"
+								data-text="w:normal;"
+								data-dim="w:511px;h:216px;"
+								data-frame_0="y:50;"
+								data-frame_1="st:2410;sp:1000;sR:2410;"
+								data-frame_999="o:0;st:w;sR:5590;"
+								style="z-index:12;"
+							><img src="assets/info2.png" alt="" class="tp-rs-img" width="433" height="183" data-no-retina> 
+							</rs-layer><!--
+-->						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-86" data-title="hamburguesas" data-ssop="true" data-in="o:0;" data-out="a:false;">
+							<img src="assets/transparent.png" alt="hamburguesas" class="rev-slidebg tp-rs-img" data-bg="c:#f4f1e9;" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-25-slide-86-layer-0" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:50px;"
+								data-text="w:normal;"
+								data-dim="w:410px;h:267px;"
+								data-frame_0="x:-100%;skX:45;"
+								data-frame_1="sp:1000;"
+								data-frame_999="o:0;st:w;sR:8000;"
+								style="z-index:6;"
+							><img src="assets/burgertimelogo.png" alt="" class="tp-rs-img" width="784" height="511" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-86-layer-1" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:c;yo:-510px;"
+								data-text="w:normal;"
+								data-dim="w:722px;h:137px;"
+								data-frame_0="y:top;"
+								data-frame_1="st:630;sp:1000;sR:630;"
+								data-frame_999="o:0;st:w;sR:7370;"
+								style="z-index:7;"
+							><img src="assets/hamburguesas.png" alt="" class="tp-rs-img" width="722" height="137" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-86-layer-5" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:539px;"
+								data-text="w:normal;"
+								data-dim="w:962px;h:1076px;"
+								data-frame_0="sX:0.9;sY:0.9;"
+								data-frame_1="st:1290;sp:1000;sR:1290;"
+								data-frame_999="o:0;st:w;sR:6710;"
+								style="z-index:8;"
+							><img src="assets/hamburguesas1-1.png" alt="" class="tp-rs-img" width="610" height="682" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-86-layer-6" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:r;xo:170px;y:b;yo:68px;"
+								data-text="w:normal;"
+								data-dim="w:166px;h:141px;"
+								data-actions='o:click;a:jumptoslide;slide:rs-88;'
+								data-frame_0="x:-100%;"
+								data-frame_0_mask="u:t;"
+								data-frame_1="st:2540;sp:1000;sR:2540;"
+								data-frame_1_mask="u:t;"
+								data-frame_999="o:0;st:w;sR:5460;"
+								style="z-index:9;"
+							><img src="assets/izquierda.png" alt="" class="tp-rs-img" width="233" height="198" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-86-layer-7" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-16px;y:b;yo:68px;"
+								data-text="w:normal;"
+								data-dim="w:176px;h:165px;"
+								data-actions='o:click;a:jumptoslide;slide:rs-85;'
+								data-frame_0="y:100%;"
+								data-frame_0_mask="u:t;"
+								data-frame_1="st:1540;sp:1200;sR:1540;"
+								data-frame_1_mask="u:t;"
+								data-frame_999="o:0;st:w;sR:6260;"
+								style="z-index:10;"
+							><img src="assets/home.png" alt="" class="tp-rs-img" width="270" height="253" data-no-retina> 
+							</rs-layer><!--
+-->						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-88" data-title="hamburguesas 2" data-ssop="true" data-in="o:0;" data-out="a:false;">
+							<img src="assets/transparent.png" alt="hamburguesas 2" class="rev-slidebg tp-rs-img" data-bg="c:#f4f1e9;" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-25-slide-88-layer-0" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:50px;"
+								data-text="w:normal;"
+								data-dim="w:410px;h:267px;"
+								data-frame_0="x:-100%;skX:45;"
+								data-frame_1="sp:1000;"
+								data-frame_999="o:0;st:w;sR:8000;"
+								style="z-index:6;"
+							><img src="assets/burgertimelogo.png" alt="" class="tp-rs-img" width="784" height="511" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-88-layer-1" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:c;yo:-510px;"
+								data-text="w:normal;"
+								data-dim="w:722px;h:137px;"
+								data-frame_0="y:top;"
+								data-frame_1="st:630;sp:1000;sR:630;"
+								data-frame_999="o:0;st:w;sR:7370;"
+								style="z-index:7;"
+							><img src="assets/hamburguesas.png" alt="" class="tp-rs-img" width="722" height="137" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-88-layer-5" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:539px;"
+								data-text="w:normal;"
+								data-dim="w:962px;h:1122px;"
+								data-frame_0="sX:0.9;sY:0.9;"
+								data-frame_1="st:1290;sp:1000;sR:1290;"
+								data-frame_999="o:0;st:w;sR:6710;"
+								style="z-index:8;"
+							><img src="assets/hamburguesas2-1.png" alt="" class="tp-rs-img" width="613" height="715" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-88-layer-7" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-16px;y:b;yo:68px;"
+								data-text="w:normal;"
+								data-dim="w:176px;h:165px;"
+								data-actions='o:click;a:jumptoslide;slide:rs-85;'
+								data-frame_0="y:100%;"
+								data-frame_0_mask="u:t;"
+								data-frame_1="st:1540;sp:1200;sR:1540;"
+								data-frame_1_mask="u:t;"
+								data-frame_999="o:0;st:w;sR:6260;"
+								style="z-index:10;"
+							><img src="assets/home.png" alt="" class="tp-rs-img" width="270" height="253" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-88-layer-8" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-324px;y:b;yo:68px;"
+								data-text="w:normal;"
+								data-dim="w:169px;h:144px;"
+								data-actions='o:click;a:jumptoslide;slide:rs-86;'
+								data-frame_0="x:100%;"
+								data-frame_0_mask="u:t;"
+								data-frame_1="st:2530;sp:1000;sR:2530;"
+								data-frame_1_mask="u:t;"
+								data-frame_999="o:0;st:w;sR:5470;"
+								style="z-index:11;"
+							><img src="assets/derecha.png" alt="" class="tp-rs-img" width="233" height="198" data-no-retina> 
+							</rs-layer><!--
+-->						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-89" data-title="lomos" data-ssop="true" data-in="o:0;" data-out="a:false;">
+							<img src="assets/transparent.png" alt="lomos" class="rev-slidebg tp-rs-img" data-bg="c:#f4f1e9;" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-25-slide-89-layer-0" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:93px;"
+								data-text="w:normal;"
+								data-dim="w:410px;h:267px;"
+								data-frame_0="x:-100%;skX:45;"
+								data-frame_1="sp:1000;"
+								data-frame_999="o:0;st:w;sR:8000;"
+								style="z-index:6;"
+							><img src="assets/burgertimelogo.png" alt="" class="tp-rs-img" width="784" height="511" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-89-layer-1" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:c;yo:-437px;"
+								data-text="w:normal;"
+								data-dim="w:722px;h:135px;"
+								data-frame_0="y:top;"
+								data-frame_1="st:630;sp:1000;sR:630;"
+								data-frame_999="o:0;st:w;sR:7370;"
+								style="z-index:7;"
+							><img src="assets/lomos.png" alt="" class="tp-rs-img" width="722" height="135" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-89-layer-5" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:633px;"
+								data-text="w:normal;"
+								data-dim="w:962px;h:973px;"
+								data-frame_0="sX:0.9;sY:0.9;"
+								data-frame_1="st:1290;sp:1000;sR:1290;"
+								data-frame_999="o:0;st:w;sR:6710;"
+								style="z-index:8;"
+							><img src="assets/lomos1.png" alt="" class="tp-rs-img" width="624" height="631" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-89-layer-7" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-16px;y:b;yo:68px;"
+								data-text="w:normal;"
+								data-dim="w:176px;h:165px;"
+								data-actions='o:click;a:jumptoslide;slide:rs-85;'
+								data-frame_0="y:100%;"
+								data-frame_0_mask="u:t;"
+								data-frame_1="st:1540;sp:1200;sR:1540;"
+								data-frame_1_mask="u:t;"
+								data-frame_999="o:0;st:w;sR:6260;"
+								style="z-index:10;"
+							><img src="assets/home.png" alt="" class="tp-rs-img" width="270" height="253" data-no-retina> 
+							</rs-layer><!--
+-->						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-90" data-title="papas y entradas" data-ssop="true" data-in="o:0;" data-out="a:false;">
+							<img src="assets/transparent.png" alt="papas y entradas" class="rev-slidebg tp-rs-img" data-bg="c:#f4f1e9;" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-25-slide-90-layer-0" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:93px;"
+								data-text="w:normal;"
+								data-dim="w:410px;h:267px;"
+								data-frame_0="x:-100%;skX:45;"
+								data-frame_1="sp:1000;"
+								data-frame_999="o:0;st:w;sR:8000;"
+								style="z-index:6;"
+							><img src="assets/burgertimelogo.png" alt="" class="tp-rs-img" width="784" height="511" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-90-layer-1" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:c;yo:-437px;"
+								data-text="w:normal;"
+								data-dim="w:721px;h:126px;"
+								data-frame_0="y:top;"
+								data-frame_1="st:630;sp:1000;sR:630;"
+								data-frame_999="o:0;st:w;sR:7370;"
+								style="z-index:7;"
+							><img src="assets/papas.png" alt="" class="tp-rs-img" width="721" height="126" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-90-layer-5" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-15px;y:656px;"
+								data-text="w:normal;"
+								data-dim="w:962px;h:580px;"
+								data-frame_0="sX:0.9;sY:0.9;"
+								data-frame_1="st:1290;sp:1000;sR:1290;"
+								data-frame_999="o:0;st:w;sR:6710;"
+								style="z-index:8;"
+							><img src="assets/papas1.png" alt="" class="tp-rs-img" width="473" height="285" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-90-layer-7" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-16px;y:b;yo:68px;"
+								data-text="w:normal;"
+								data-dim="w:176px;h:165px;"
+								data-actions='o:click;a:jumptoslide;slide:rs-85;'
+								data-frame_0="y:100%;"
+								data-frame_0_mask="u:t;"
+								data-frame_1="st:1540;sp:1200;sR:1540;"
+								data-frame_1_mask="u:t;"
+								data-frame_999="o:0;st:w;sR:6260;"
+								style="z-index:10;"
+							><img src="assets/home.png" alt="" class="tp-rs-img" width="270" height="253" data-no-retina> 
+							</rs-layer><!--
+-->						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-91" data-title="extras" data-ssop="true" data-in="o:0;" data-out="a:false;">
+							<img src="assets/transparent.png" alt="extras" class="rev-slidebg tp-rs-img" data-bg="c:#f4f1e9;" data-no-retina>
+<!--
+							--><rs-layer
+								id="slider-25-slide-91-layer-0" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:93px;"
+								data-text="w:normal;"
+								data-dim="w:410px;h:267px;"
+								data-frame_0="x:-100%;skX:45;"
+								data-frame_1="sp:1000;"
+								data-frame_999="o:0;st:w;sR:8000;"
+								style="z-index:6;"
+							><img src="assets/burgertimelogo.png" alt="" class="tp-rs-img" width="784" height="511" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-91-layer-1" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:c;yo:-401px;"
+								data-text="w:normal;"
+								data-dim="w:721px;h:132px;"
+								data-frame_0="y:top;"
+								data-frame_1="st:630;sp:1000;sR:630;"
+								data-frame_999="o:0;st:w;sR:7370;"
+								style="z-index:7;"
+							><img src="assets/extras.png" alt="" class="tp-rs-img" width="721" height="132" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-91-layer-5" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;y:681px;"
+								data-text="w:normal;"
+								data-dim="w:962px;h:763px;"
+								data-frame_0="sX:0.9;sY:0.9;"
+								data-frame_1="st:1290;sp:1000;sR:1290;"
+								data-frame_999="o:0;st:w;sR:6710;"
+								style="z-index:8;"
+							><img src="assets/extras1.png" alt="" class="tp-rs-img" width="426" height="338" data-no-retina> 
+							</rs-layer><!--
+
+							--><rs-layer
+								id="slider-25-slide-91-layer-7" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-16px;y:b;yo:68px;"
+								data-text="w:normal;"
+								data-dim="w:176px;h:165px;"
+								data-actions='o:click;a:jumptoslide;slide:rs-85;'
+								data-frame_0="y:100%;"
+								data-frame_0_mask="u:t;"
+								data-frame_1="st:1540;sp:1200;sR:1540;"
+								data-frame_1_mask="u:t;"
+								data-frame_999="o:0;st:w;sR:6260;"
+								style="z-index:10;"
+							><img src="assets/home.png" alt="" class="tp-rs-img" width="270" height="253" data-no-retina> 
+							</rs-layer><!--
+-->						</rs-slide>
+					</rs-slides>
+				</rs-module>
+				<script>
+					
+				</script>
+<script>
+		if(typeof revslider_showDoubleJqueryError === "undefined") {function revslider_showDoubleJqueryError(sliderID) {console.log("You have some jquery.js library include that comes after the Slider Revolution files js inclusion.");console.log("To fix this, you can:");console.log("1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on");console.log("2. Find the double jQuery.js inclusion and remove it");return "Double Included jQuery Library";}}
+</script>
+			</rs-module-wrap>
+			<!-- END REVOLUTION SLIDER -->
+
+				<script>
+					var	tpj = jQuery;
+					if(window.RS_MODULES === undefined) window.RS_MODULES = {};
+					if(RS_MODULES.modules === undefined) RS_MODULES.modules = {};
+					RS_MODULES.modules["revslider251"] = {once: RS_MODULES.modules["revslider251"]!==undefined ? RS_MODULES.modules["revslider251"].once : undefined, init:function() {
+						window.revapi25 = window.revapi25===undefined || window.revapi25===null || window.revapi25.length===0  ? document.getElementById("rev_slider_25_1") : window.revapi25;
+						if(window.revapi25 === null || window.revapi25 === undefined || window.revapi25.length==0) { window.revapi25initTry = window.revapi25initTry ===undefined ? 0 : window.revapi25initTry+1; if (window.revapi25initTry<20) requestAnimationFrame(function() {RS_MODULES.modules["revslider251"].init()}); return;}
+						window.revapi25 = jQuery(window.revapi25);
+						if(window.revapi25.revolution==undefined){ revslider_showDoubleJqueryError("rev_slider_25_1"); return;}
+						revapi25.revolutionInit({
+								revapi:"revapi25",
+								DPR:"dpr",
+								visibilityLevels:"1240,1024,778,480",
+								gridwidth:1080,
+								gridheight:1920,
+								perspective:600,
+								perspectiveType:"global",
+								editorheight:"1920,768,960,720",
+								responsiveLevels:"1240,1024,778,480",
+								progressBar:{disableProgressBar:true},
+								navigation: {
+									onHoverStop:false
+								},
+								viewPort: {
+									global:false,
+									globalDist:"-200px",
+									enable:false
+								},
+								fallbacks: {
+									allowHTML5AutoPlayOnAndroid:true
+								},
+						});
+						
+					}} // End of RevInitScript
+					if (window.RS_MODULES.checkMinimal!==undefined) { window.RS_MODULES.checkMinimal();};
+				</script>
+
+
+
+		</body>
+				</html>
+		
